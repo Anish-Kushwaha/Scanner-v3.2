@@ -12,6 +12,7 @@ pip install -r requirements.txt
 # Creator 🪐
  This is Anish Kushwaha, the creator. This Scanning tool is only for educational purposes, any miss use of this tool can lead to serious consequences. Use this tool wisely only on Authorised Systems.
  In case of any issue please contact us through our Email : Anish_Kushwaha@proton.me
+Website : Anish-kushwaha.b12sites.com
 
  
 # Legal reminder (🇮🇳):
