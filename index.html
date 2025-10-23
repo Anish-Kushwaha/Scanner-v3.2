@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Scanner - Project Landing</title>
+  <meta name="description" content="Scanner-v3.2 — safe demo scaffold for authorized security testing and learning."/>
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#06b6d4; --accent-2:#7c3aed; --text:#e6eef8;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#061022);color:var(--text);line-height:1.45}
+    .wrap{max-width:980px;margin:32px auto;padding:20px}
+    header{display:flex;gap:16px;align-items:center}
+    .logo{
+      width:72px;height:72px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      display:flex;align-items:center;justify-content:center;font-weight:700;font-size:26px;color:#fff;box-shadow:0 8px 30px rgba(2,6,23,.6)
+    }
+    h1{margin:0;font-size:1.6rem}
+    p.lead{color:var(--muted);margin:8px 0 18px}
+    .card{background:rgba(255,255,255,.02);padding:18px;border-radius:12px;margin-top:18px;border:1px solid rgba(255,255,255,.03)}
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+    pre{background:#031028;padding:12px;border-radius:8px;overflow:auto;color:#d1f0f8}
+    code{font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;font-size:0.95rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;color:#042028;background:var(--text);font-weight:600}
+    .muted{color:var(--muted);font-size:0.95rem}
+    footer{margin-top:24px;color:var(--muted);font-size:0.9rem;text-align:center}
+    ul{margin:8px 0 12px 18px}
+    .notice{background:linear-gradient(90deg, rgba(124,58,237,.09), rgba(6,182,212,.06));padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,.02);color:var(--muted);margin-bottom:12px}
+  </style>
+</head>
+<body>
+  <main class="wrap" role="main">
+    <header>
+      <div class="logo">A.K</div>
+      <div>
+        <h1>Scanner — v3.2 <span style="font-size:0.75rem;color:var(--muted);font-weight:600">Safe demo scaffold</span></h1>
+        <p class="lead">A learning-oriented reconnaissance scaffold for authorized security testing. This page documents installation, safe usage, and contact details.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="notice"><strong>Important — Legal & Ethical Notice:</strong> You must have explicit, written permission to scan or test systems you do not own. Unauthorized scanning is illegal in many jurisdictions.</div>
+
+      <div class="grid">
+        <div>
+          <h3>Quick install</h3>
+          <p class="muted">Use a Python virtual environment and the provided <code>requirements.txt</code>.</p>
+          <pre><code># Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+python -m src.anish_scanner.core
+</code></pre>
+
+          <h3>What this repo contains</h3>
+          <ul>
+            <li><strong>Safe stubs</strong> for network and web analysis (no active exploit code by default).</li>
+            <li>Logging & JSON report generation.</li>
+            <li>Scripts that require an <code>AUTHORIZED=1</code> env var to run live code (you still must obtain permission).</li>
+            <li>Examples and documentation for safe testing in lab environments.</li>
+          </ul>
+
+          <h3>How to preview this page locally</h3>
+          <p class="muted">From repo root (serves files over <code>http://localhost:8000</code>):</p>
+          <pre><code>python3 -m http.server 8000
+# then open http://localhost:8000/index.html in your browser
+</code></pre>
+        </div>
+
+        <aside>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <div>
+              <strong>Project</strong>
+              <p class="muted">Scanner-v3.2 • Anish Kushwaha</p>
+            </div>
+
+            <div>
+              <strong>Contact</strong>
+              <p class="muted">Email: <a href="mailto:Anish_Kushwaha@proton.me" style="color:var(--accent) ;text-decoration:none">Anish_Kushwaha@proton.me</a></p>
+              <p class="muted">Website: <a href="https://anish-kushwaha.b12sites.com" target="_blank" style="color:var(--accent) ;text-decoration:none">anish-kushwaha.b12sites.com</a></p>
+            </div>
+
+            <div>
+              <strong>License</strong>
+              <p class="muted">MIT — see <code>LICENSE</code></p>
+            </div>
+
+            <div>
+              <strong>Quick links</strong>
+              <p><a class="btn" href="https://github.com/Anish-Kushwaha/Scsnner-v3.2" target="_blank">View on GitHub</a></p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="details-title">
+      <h2 id="details-title">Usage notes & safety</h2>
+      <p class="muted">This page and the project are designed for education and controlled lab testing. If you choose to add live scanning code, follow these minimum safeguards:</p>
+      <ul>
+        <li>Require an explicit environment variable (e.g., <code>AUTHORIZED=1</code>) before any network tests run.</li>
+        <li>Run scans only on VMs or systems you own, or where you have written permission.</li>
+        <li>Limit concurrency & respect rate limiting to avoid DoS-like effects.</li>
+        <li>Keep backups and always test changes in isolated environments first.</li>
+      </ul>
+    </section>
+
+    <footer>
+      <p class="muted">Made with care • Anish Kushwaha • Scanner-v3.2 • © <span id="year"></span> Anish Kushwaha</p>
+      <p class="muted">Final reminder: Unauthorized scanning may be illegal. Use responsibly.</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
