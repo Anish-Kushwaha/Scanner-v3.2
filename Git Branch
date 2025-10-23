@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial safe scaffold for Scanner (stubs only)"
+git branch -M main
+git remote add origin https://github.com/Anish-Kushwaha/Scanner-v3.2.git
+git push -u origin main
